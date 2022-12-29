@@ -3,13 +3,15 @@ package com.hillel.lessons.lesson4;
 public class Main {
     public static void main(String[] args) {
 
-        int a = 10;
-        int b = 5;
+        int a = 9;
+        int b = 6;
+        int h = 3;
 
+        int volume = a * b * h;
+        System.out.println("Об'єм паралелепіпеда = " + volume );
 
-//        System.out.println();
-        System.out.println(a + b);
-        System.out.println();
-        System.out.println();
+        int lenght = 4*(a+b+h);
+        System.out.println("Cумарна довжина всіх сторін паралелепіпеда = " + lenght );
+
     }
 }
