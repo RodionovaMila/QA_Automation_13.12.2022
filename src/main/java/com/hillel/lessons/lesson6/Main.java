@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
 
         String name1 = "Team1";
-        String name2 = "Team2";
 
         int team1Player1 = 5;
         int team1Player2 = 7;
@@ -14,7 +13,7 @@ public class Main {
         int team1Player4 = 13;
         int team1Player5 = 20;
 
-
+        String name2 = "Team2";
 
         int team2Player1 = 3;
         int team2Player2 = 6;
