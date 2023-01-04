@@ -1,7 +1,5 @@
 package com.hillel.lessons.lesson6;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
