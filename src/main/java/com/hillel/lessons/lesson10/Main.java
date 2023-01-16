@@ -18,7 +18,7 @@ package com.hillel.lessons.lesson10;
              }
              System.out.println();
          }
-                // часть 2 - транспонирование матрицы
+
          for (int n = 0; n < a.length; n++) {
               for (int m = n + 1; m < a.length; m++) {
               int temp = a[n][m];
@@ -27,7 +27,7 @@ package com.hillel.lessons.lesson10;
                     }
                 }
 
-                // часть 3 - выводит на экран транспонированную матрицу
+
               System.out.println();
               System.out.println("Новая матрица");
               System.out.println("------");
