@@ -16,8 +16,8 @@ class Main {
 
 }
 
-     class Person {
-     Person(String name, String surname, String city, String phone) {
+class Person {
+    Person(String name, String surname, String city, String phone) {
 
         this.name = name;
         this.surname = surname;
@@ -27,7 +27,7 @@ class Main {
     }
 
     public String personInfo() {
-    return "Зателефонувати громадянину " + name + " " + surname + " із міста " + city + " можна за номером " + phone;
+        return "Зателефонувати громадянину " + name + " " + surname + " із міста " + city + " можна за номером " + phone;
 
     }
 
@@ -37,4 +37,3 @@ class Main {
     private String phone;
 
 }
-
