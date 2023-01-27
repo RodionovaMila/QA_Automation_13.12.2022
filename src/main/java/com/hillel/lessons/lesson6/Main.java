@@ -82,7 +82,7 @@ public class Main {
         System.out.println("Cереднє арифметичне балів команди Team2: " + resultTeam2);
 
         if (resultTeam2 > resultTeam1) {
-            System.out.println("Перемогла команда " + name2 + " набрала " + resultTeam1 + " очків");
+            System.out.println("Перемогла команда " + name2 + " набрала " + resultTeam2 + " очків");
         } else if (resultTeam2 == resultTeam1) {
             System.out.println("Нічия");
         } else {
