@@ -4,10 +4,10 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class User {
-    private String name;
-    private LocalDate birthday;
-    private String email;
-    private String phone;
+    private final String name;
+    private final LocalDate birthday;
+    private final String email;
+    private final String phone;
     private String surname;
     private int weight;
     private int pressure;
