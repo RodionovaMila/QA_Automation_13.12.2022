@@ -102,7 +102,6 @@ public class User {
         user1.printAccountInfo();
         user2.printAccountInfo();
 
-        // Изменение параметров для двух пользователей
 
         user1.setSurname("Ivanchenko");
         user1.setWeight(65);
@@ -113,7 +112,6 @@ public class User {
         user2.setPressure(110);
         user2.setSteps(10000);
 
-        // Печать информации о пользователях
 
         user1.printAccountInfo();
         user2.printAccountInfo();
