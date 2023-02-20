@@ -10,13 +10,14 @@ public class Main {
     private static final int attemptsNumber = 3;
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Random random = new Random(System.currentTimeMillis());
         final int randomNumber = random.nextInt(10);
         int usersNumber;
+
         for (int i = 0; i < attemptsNumber; i++) {
             System.out.println(guessNumber);
-            usersNumber = in.nextInt();
+            usersNumber = scanner.nextInt();
             if (randomNumber == usersNumber) {
                 System.out.println(Congratulation);
                 break;
