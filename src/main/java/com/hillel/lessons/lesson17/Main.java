@@ -6,11 +6,11 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         // Создаем продукты
-        Product p1 = new Product("Шоколад", 3.50);
-        Product p2 = new Product("Молоко", 1.20);
-        Product p3 = new Product("Хлеб", 2.30);
-        Product p4 = new Product("Сыр", 7.40);
-        Product p5 = new Product("Яблоки", 0.80);
+        Product p1 = new Product("Шоколад", 30.50);
+        Product p2 = new Product("Молоко", 25.20);
+        Product p3 = new Product("Хлеб", 20.30);
+        Product p4 = new Product("Сыр", 3.40);
+        Product p5 = new Product("Яблоки", 4.80);
 
         // Создаем список продуктов
         List<Product> products = new ArrayList<>();
