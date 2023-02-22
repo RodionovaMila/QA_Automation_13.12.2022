@@ -17,7 +17,13 @@ public class Main {
 
         for (int i = 0; i < attemptsNumber; i++) {
             System.out.println(guessNumber);
+
+        while (!scanner.hasNextInt()) {
+          System.out.print("Пожалуйста, введите целое число: ");
+          scanner.next();
+          }
             usersNumber = scanner.nextInt();
+
             if (randomNumber == usersNumber) {
                 System.out.println(Congratulation);
                 break;
