@@ -5,64 +5,83 @@ package com.hillel.lessons.lesson10;
     import java.util.Scanner;
 
 
-    public class TransposeMatrix {
+public class TransposeMatrix {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        // Запрос размеров матрицы у пользователя
         System.out.print("Введите количество строк: ");
-        while (!input.hasNextShort()) {
-            System.out.print("Пожалуйста, введите целое число: ");
-            input.next();
+        int m = 0;
+        while (scanner.hasNext()) {
+            if (scanner.hasNextInt()) {
+                m = scanner.nextInt();
+                if (m < 0) {
+                    System.out.println("Ошибка: количество строк не может быть отрицательным.");
+                    return;
+                }
+                break;
+            } else {
+                System.out.println("Ошибка: введено некорректное значение. Введите целое положительное число.");
+                scanner.next();
             }
-        short m = input.nextShort();
+        }
 
         System.out.print("Введите количество столбцов: ");
-        while (!input.hasNextShort()) {
-            System.out.print("Пожалуйста, введите целое число: ");
-            input.next();
+        int n = 0;
+        while (scanner.hasNext()) {
+            if (scanner.hasNextInt()) {
+                n = scanner.nextInt();
+                if (n < 0) {
+                    System.out.println("Ошибка: количество столбцов не может быть отрицательным.");
+                    return;
+                }
+                break;
+            } else {
+                System.out.println("Ошибка: введено некорректное значение. Введите целое положительное число.");
+                scanner.next();
             }
-        short n = input.nextShort();
-
-        // Создание матрицы
-        short[][] matrix = new short[m][n];
-
-        // Заполнение матрицы данными от пользователя
-        System.out.println("Введите данные матрицы:");
-        while (!input.hasNextShort()) {
-            System.out.print("Пожалуйста, введите целое число: ");
-            input.next();
         }
-        for (short i = 0; i < m; i++) {
-            for (short j = 0; j < n; j++) {
-                matrix[i][j] = input.nextShort();
+
+        int[][] matrix1 = new int[m][n];
+        int[][] matrix2 = new int[n][m];
+
+        System.out.println("Введите элементы матрицы:");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                while (scanner.hasNext()) {
+                    if (scanner.hasNextInt()) {
+                        matrix1[i][j] = scanner.nextInt();
+                        break;
+                    } else {
+                        System.out.println("Ошибка: введено некорректное значение. Введите целое число.");
+                        scanner.next();
+                    }
+                }
             }
         }
 
         // Транспонирование матрицы
-        short[][] transposedMatrix = new short[n][m];
-        for (short i = 0; i < n; i++) {
-            for (short j = 0; j < m; j++) {
-                transposedMatrix[i][j] = matrix[j][i];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix2[j][i] = matrix1[i][j];
             }
         }
 
-        // Вывод исходной матрицы
-        System.out.println("Исходная матрица:");
-        for (short i = 0; i < m; i++) {
-            for (short j = 0; j < n; j++) {
-                System.out.print(matrix[i][j] + " ");
+        System.out.println("Матрица:");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(matrix1[i][j] + " ");
             }
             System.out.println();
         }
 
-        // Вывод транспонированной матрицы
         System.out.println("Транспонированная матрица:");
-        for (short i = 0; i < n; i++) {
-            for (short j = 0; j < m; j++) {
-                System.out.print(transposedMatrix[i][j] + " ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(matrix2[i][j] + " ");
             }
             System.out.println();
         }
     }
 }
+
+
